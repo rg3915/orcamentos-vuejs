@@ -10,31 +10,41 @@
 
 <script>
 export default {
+  mounted() {
+    firebase
+      .firestore()
+      .collection("proposals")
+      .onSnapshot(snapshot => {
+        let items = [];
+
+        snapshot.forEach(doc => {
+          const data = doc.data();
+
+          items.push({
+            id: doc.id,
+            ...data
+          });
+        });
+
+        this.items = items;
+      });
+  },
   data() {
     return {
       fields: {
-        age: {
-          label: "Idade",
+        title: {
+          label: "Título",
           sortable: true
         },
-        first_name: {
-          label: "Primeiro nome",
-          sortable: true
-        },
-        last_name: {
-          label: "Último nome",
+        price: {
+          label: "Valor",
           sortable: true
         },
         actions: {
           label: "Ações"
         }
       },
-      items: [
-        { age: 40, first_name: "Dickerson", last_name: "Macdonald" },
-        { age: 21, first_name: "Larsen", last_name: "Shaw" },
-        { age: 89, first_name: "Geneva", last_name: "Wilson" },
-        { age: 38, first_name: "Jami", last_name: "Carney" }
-      ]
+      items: []
     };
   }
 };

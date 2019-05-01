@@ -12,6 +12,19 @@
       <strong>We're sorry but orcamentos-vuejs doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
+    <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyB-osY7FXXbjUDL4GGfZ9N_vL67G4oM2yA",
+        authDomain: "orcamentos-vue.firebaseapp.com",
+        databaseURL: "https://orcamentos-vue.firebaseio.com",
+        projectId: "orcamentos-vue",
+        storageBucket: "orcamentos-vue.appspot.com",
+        messagingSenderId: "434376695130"
+      };
+      firebase.initializeApp(config);
+    </script>
     <!-- built files will be auto injected -->
   </body>
 </html>
