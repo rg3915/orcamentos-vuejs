@@ -1,6 +1,10 @@
 <template>
   <div>
-    <b-table striped hover :items="items"></b-table>
+    <b-table striped hover :fields="fields" :items="items">
+      <template slot="actions" slot-scope="row">
+        <b-button :to="'/proposals/' + row.index">Abrir</b-button>
+      </template>
+    </b-table>
   </div>
 </template>
 
@@ -8,6 +12,23 @@
 export default {
   data() {
     return {
+      fields: {
+        age: {
+          label: "Idade",
+          sortable: true
+        },
+        first_name: {
+          label: "Primeiro nome",
+          sortable: true
+        },
+        last_name: {
+          label: "Último nome",
+          sortable: true
+        },
+        actions: {
+          label: "Ações"
+        }
+      },
       items: [
         { age: 40, first_name: "Dickerson", last_name: "Macdonald" },
         { age: 21, first_name: "Larsen", last_name: "Shaw" },
