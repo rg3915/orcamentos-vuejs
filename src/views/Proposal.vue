@@ -1,36 +1,36 @@
 <template>
   <div>
     <p>
-      <b>Age:</b>
-      {{ selectedItem.age }}
+      <b>Título:</b>
+      {{ item.title }}
     </p>
     <p>
-      <b>First Name:</b>
-      {{ selectedItem.first_name }}
-    </p>
-    <p>
-      <b>Last Name:</b>
-      {{ selectedItem.last_name }}
+      <b>Valor:</b>
+      {{ item.price }}
     </p>
   </div>
 </template>
 
 <script>
 export default {
+  mounted() {
+    firebase
+      .firestore()
+      .collection("proposals")
+      .doc(this.$route.params.id)
+      .onSnapshot(doc => {
+        const data = doc.data();
+
+        this.item = {
+          id: doc.id,
+          ...data
+        };
+      });
+  },
   data() {
     return {
-      items: [
-        { age: 40, first_name: "Dickerson", last_name: "Macdonald" },
-        { age: 21, first_name: "Larsen", last_name: "Shaw" },
-        { age: 89, first_name: "Geneva", last_name: "Wilson" },
-        { age: 38, first_name: "Jami", last_name: "Carney" }
-      ]
+      item: {}
     };
-  },
-  computed: {
-    selectedItem() {
-      return this.items[this.$route.params.id];
-    }
   }
 };
 </script>

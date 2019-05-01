@@ -2,7 +2,7 @@
   <div>
     <b-table striped hover :fields="fields" :items="items">
       <template slot="actions" slot-scope="row">
-        <b-button :to="'/proposals/' + row.index">Abrir</b-button>
+        <b-button :to="'/proposals/' + row.item.id">Abrir</b-button>
       </template>
     </b-table>
   </div>
