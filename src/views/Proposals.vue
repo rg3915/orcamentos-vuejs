@@ -1,8 +1,8 @@
 <template>
   <div>
-    <b-button v-b-modal.modal-1>Criar orçamento</b-button>
+    <b-button v-b-modal.modal-1 @click="modalShow = false">Criar orçamento</b-button>
 
-    <b-modal id="modal-1" title="BootstrapVue" @ok="addProposal">
+    <b-modal v-model="modalShow" id="modal-1" title="BootstrapVue" @ok="submitProposal">
       <div class="my-4">
         <b-form-group id="input-group-1" label="Título:" label-for="input-1">
           <b-form-input id="input-1" v-model="editingItem.title" type="text" required></b-form-input>
@@ -16,7 +16,8 @@
 
     <b-table striped hover :fields="fields" :items="items">
       <template slot="actions" slot-scope="row">
-        <b-button :to="'/proposals/' + row.item.id">Abrir</b-button>
+        <b-button class="mr-2" :to="'/proposals/' + row.item.id">Abrir</b-button>
+        <b-button class="mr-2" @click="editProposal(row.item)">Editar</b-button>
         <b-button variant="danger" @click="deleteProposal(row.item.id)">Apagar</b-button>
       </template>
     </b-table>
@@ -46,6 +47,7 @@ export default {
   },
   data() {
     return {
+      modalShow: false,
       editingItem: {
         title: "",
         price: 0
@@ -67,16 +69,33 @@ export default {
     };
   },
   methods: {
-    addProposal() {
-      firebase
-        .firestore()
-        .collection("proposals")
-        .add(this.editingItem);
+    submitProposal() {
+      if (this.editingItem.id) {
+        firebase
+          .firestore()
+          .collection("proposals")
+          .doc(this.editingItem.id)
+          .set({
+            price: this.editingItem.price,
+            title: this.editingItem.title
+          });
+      } else {
+        firebase
+          .firestore()
+          .collection("proposals")
+          .add(this.editingItem);
+      }
 
       this.editingItem = {
         title: "",
         price: 0
       };
+    },
+    editProposal(item) {
+      this.editingItem = {
+        ...item
+      };
+      this.modalShow = true;
     },
     deleteProposal(id) {
       if (!confirm("Deseja realmente apagar este item?")) {
