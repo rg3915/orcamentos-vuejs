@@ -14,6 +14,16 @@ export default [
       },
       {
         _name: 'CSidebarNavTitle',
+        _children: ['CRM']
+      },
+      {
+        _name: 'CSidebarNavItem',
+        name: 'Persons',
+        to: '/persons',
+        icon: 'cil-people'
+      },
+      {
+        _name: 'CSidebarNavTitle',
         _children: ['Theme']
       },
       {
