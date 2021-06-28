@@ -69,6 +69,10 @@ const Customer = () => import('@/views/crm/customers/Customer')
 const Works = () => import('@/views/proposal/works/Works')
 const Work = () => import('@/views/proposal/works/Work')
 
+// Proposals
+const Proposals = () => import('@/views/proposal/proposals/Proposals')
+const Proposal = () => import('@/views/proposal/proposals/Proposal')
+
 Vue.use(Router)
 
 export default new Router({
@@ -196,6 +200,32 @@ function configRoutes () {
               },
               name: 'Customer',
               component: Customer
+            }
+          ]
+        },
+        {
+          path: 'proposals',
+          meta: {
+            label: 'Proposals'
+          },
+          component: {
+            render(c) {
+              return c('router-view')
+            }
+          },
+          children: [
+            {
+              path: '',
+              name: 'Proposals',
+              component: Proposals
+            },
+            {
+              path: ':id',
+              meta: {
+                label: 'Proposal Details'
+              },
+              name: 'Proposal',
+              component: Proposal
             }
           ]
         },

@@ -34,6 +34,12 @@ export default [
       },
       {
         _name: 'CSidebarNavItem',
+        name: 'Proposals',
+        to: '/proposals',
+        icon: 'cil-list'
+      },
+      {
+        _name: 'CSidebarNavItem',
         name: 'Works',
         to: '/works',
         icon: 'cil-layers'
