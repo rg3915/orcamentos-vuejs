@@ -1,3 +1,5 @@
+# Orcamentos VueJS
+
 Este projeto foi baseado no CoreUI Free Vue Bootstrap Admin Template
 
 [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=CoreUI%20-%20Free%20Vue%20Admin%20Template%20&url=http://coreui.io/vue/&hashtags=bootstrap,admin,template,dashboard,panel,free,angular,react,vue)
@@ -16,7 +18,7 @@ Este projeto foi baseado no CoreUI Free Vue Bootstrap Admin Template
 
 ## Descrição
 
-**Orçamentos** é um sistema que gerencia orçamentos de obras de construção civil.
+**Orçamentos** é um sistema que gerencia orçamentos de obras de construção civil. Controla a sequência numérica dos orçamentos, seus valores e status. E cadastra clientes, obras e contatos.
 
 É baseado em [orcamentos](https://github.com/rg3915/orcamentos).
 
