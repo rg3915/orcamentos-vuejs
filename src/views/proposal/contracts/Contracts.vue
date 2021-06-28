@@ -3,7 +3,7 @@
     <CCol col="12" xl="8">
       <CCard>
         <CCardHeader>
-          Contracts
+          Contratos
         </CCardHeader>
         <CCardBody>
           <CDataTable

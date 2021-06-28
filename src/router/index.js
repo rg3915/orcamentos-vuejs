@@ -162,7 +162,7 @@ function configRoutes () {
         {
           path: 'persons',
           meta: {
-            label: 'Persons'
+            label: 'Contatos'
           },
           component: {
             render(c) {
@@ -172,13 +172,16 @@ function configRoutes () {
           children: [
             {
               path: '',
+              meta: {
+                label: 'Contatos'
+              },
               name: 'Persons',
               component: Persons
             },
             {
               path: ':id',
               meta: {
-                label: 'Person Details'
+                label: 'Contato Detalhes'
               },
               name: 'Person',
               component: Person
@@ -188,7 +191,7 @@ function configRoutes () {
         {
           path: 'customers',
           meta: {
-            label: 'Customers'
+            label: 'Clientes'
           },
           component: {
             render(c) {
@@ -198,13 +201,16 @@ function configRoutes () {
           children: [
             {
               path: '',
+              meta: {
+                label: 'Clientes'
+              },
               name: 'Customers',
               component: Customers
             },
             {
               path: ':id',
               meta: {
-                label: 'Customer Details'
+                label: 'Cliente Detalhes'
               },
               name: 'Customer',
               component: Customer
@@ -214,7 +220,7 @@ function configRoutes () {
         {
           path: 'entrys',
           meta: {
-            label: 'Entrys'
+            label: 'Entradas'
           },
           component: {
             render(c) {
@@ -225,12 +231,15 @@ function configRoutes () {
             {
               path: '',
               name: 'Entrys',
+              meta: {
+                label: 'Entradas'
+              },
               component: Entrys
             },
             {
               path: ':id',
               meta: {
-                label: 'Entry Details'
+                label: 'Entrada Detalhes'
               },
               name: 'Entry',
               component: Entry
@@ -240,7 +249,7 @@ function configRoutes () {
         {
           path: 'proposals',
           meta: {
-            label: 'Proposals'
+            label: 'Orçamentos'
           },
           component: {
             render(c) {
@@ -250,13 +259,16 @@ function configRoutes () {
           children: [
             {
               path: '',
+              meta: {
+                label: 'Orçamentos'
+              },
               name: 'Proposals',
               component: Proposals
             },
             {
               path: ':id',
               meta: {
-                label: 'Proposal Details'
+                label: 'Orçamento Detalhes'
               },
               name: 'Proposal',
               component: Proposal
@@ -266,7 +278,7 @@ function configRoutes () {
         {
           path: 'contracts',
           meta: {
-            label: 'Contracts'
+            label: 'Contratos'
           },
           component: {
             render(c) {
@@ -276,13 +288,16 @@ function configRoutes () {
           children: [
             {
               path: '',
+              meta: {
+                label: 'Contratos'
+              },
               name: 'Contracts',
               component: Contracts
             },
             {
               path: ':id',
               meta: {
-                label: 'Contract Details'
+                label: 'Contrato Detalhes'
               },
               name: 'Contract',
               component: Contract
@@ -292,7 +307,7 @@ function configRoutes () {
         {
           path: 'works',
           meta: {
-            label: 'Works'
+            label: 'Obras'
           },
           component: {
             render(c) {
@@ -302,13 +317,16 @@ function configRoutes () {
           children: [
             {
               path: '',
+              meta: {
+                label: 'Obras'
+              },
               name: 'Works',
               component: Works
             },
             {
               path: ':id',
               meta: {
-                label: 'Work Details'
+                label: 'Obra Detalhes'
               },
               name: 'Work',
               component: Work

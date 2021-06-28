@@ -3,7 +3,7 @@
     <CCol col="12" xl="8">
       <CCard>
         <CCardHeader>
-          Persons
+          Contatos
         </CCardHeader>
         <CCardBody>
           <CDataTable

@@ -3,7 +3,7 @@
     <CCol col="12" lg="6">
       <CCard>
         <CCardHeader>
-          Entry id:  {{ $route.params.id }}
+          Entrada id:  {{ $route.params.id }}
         </CCardHeader>
         <CCardBody>
           <CDataTable

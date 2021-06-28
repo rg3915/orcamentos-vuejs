@@ -18,15 +18,15 @@ export default [
       },
       {
         _name: 'CSidebarNavItem',
-        name: 'Persons',
-        to: '/persons',
-        icon: 'cil-user'
+        name: 'Clientes',
+        to: '/customers',
+        icon: 'cil-people'
       },
       {
         _name: 'CSidebarNavItem',
-        name: 'Customers',
-        to: '/customers',
-        icon: 'cil-people'
+        name: 'Contatos',
+        to: '/persons',
+        icon: 'cil-user'
       },
       {
         _name: 'CSidebarNavTitle',
@@ -34,25 +34,25 @@ export default [
       },
       {
         _name: 'CSidebarNavItem',
-        name: 'Entrys',
+        name: 'Entradas',
         to: '/entrys',
         icon: 'cil-list'
       },
       {
         _name: 'CSidebarNavItem',
-        name: 'Proposals',
+        name: 'Orçamentos',
         to: '/proposals',
         icon: 'cil-list'
       },
       {
         _name: 'CSidebarNavItem',
-        name: 'Contracts',
+        name: 'Contratos',
         to: '/contracts',
         icon: 'cil-star'
       },
       {
         _name: 'CSidebarNavItem',
-        name: 'Works',
+        name: 'Obras',
         to: '/works',
         icon: 'cil-layers'
       },

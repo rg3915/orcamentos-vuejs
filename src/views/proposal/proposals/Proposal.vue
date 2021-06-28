@@ -3,7 +3,7 @@
     <CCol col="12" lg="6">
       <CCard>
         <CCardHeader>
-          Proposal id:  {{ $route.params.id }}
+          Orçamento id:  {{ $route.params.id }}
         </CCardHeader>
         <CCardBody>
           <CDataTable
