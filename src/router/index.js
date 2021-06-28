@@ -73,6 +73,10 @@ const Work = () => import('@/views/proposal/works/Work')
 const Proposals = () => import('@/views/proposal/proposals/Proposals')
 const Proposal = () => import('@/views/proposal/proposals/Proposal')
 
+// Contracts
+const Contracts = () => import('@/views/proposal/contracts/Contracts')
+const Contract = () => import('@/views/proposal/contracts/Contract')
+
 Vue.use(Router)
 
 export default new Router({
@@ -226,6 +230,32 @@ function configRoutes () {
               },
               name: 'Proposal',
               component: Proposal
+            }
+          ]
+        },
+        {
+          path: 'contracts',
+          meta: {
+            label: 'Contracts'
+          },
+          component: {
+            render(c) {
+              return c('router-view')
+            }
+          },
+          children: [
+            {
+              path: '',
+              name: 'Contracts',
+              component: Contracts
+            },
+            {
+              path: ':id',
+              meta: {
+                label: 'Contract Details'
+              },
+              name: 'Contract',
+              component: Contract
             }
           ]
         },

@@ -20,7 +20,7 @@ export default [
         _name: 'CSidebarNavItem',
         name: 'Persons',
         to: '/persons',
-        icon: 'cil-people'
+        icon: 'cil-user'
       },
       {
         _name: 'CSidebarNavItem',
@@ -37,6 +37,12 @@ export default [
         name: 'Proposals',
         to: '/proposals',
         icon: 'cil-list'
+      },
+      {
+        _name: 'CSidebarNavItem',
+        name: 'Contracts',
+        to: '/contracts',
+        icon: 'cil-star'
       },
       {
         _name: 'CSidebarNavItem',
