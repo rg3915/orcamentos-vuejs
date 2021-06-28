@@ -58,12 +58,16 @@ const Users = () => import('@/views/users/Users')
 const User = () => import('@/views/users/User')
 
 // Persons
-const Persons = () => import('@/views/persons/Persons')
-const Person = () => import('@/views/persons/Person')
+const Persons = () => import('@/views/crm/persons/Persons')
+const Person = () => import('@/views/crm/persons/Person')
+
+// Customers
+const Customers = () => import('@/views/crm/customers/Customers')
+const Customer = () => import('@/views/crm/customers/Customer')
 
 // Works
-const Works = () => import('@/views/works/Works')
-const Work = () => import('@/views/works/Work')
+const Works = () => import('@/views/proposal/works/Works')
+const Work = () => import('@/views/proposal/works/Work')
 
 Vue.use(Router)
 
@@ -166,6 +170,32 @@ function configRoutes () {
               },
               name: 'Person',
               component: Person
+            }
+          ]
+        },
+        {
+          path: 'customers',
+          meta: {
+            label: 'Customers'
+          },
+          component: {
+            render(c) {
+              return c('router-view')
+            }
+          },
+          children: [
+            {
+              path: '',
+              name: 'Customers',
+              component: Customers
+            },
+            {
+              path: ':id',
+              meta: {
+                label: 'Customer Details'
+              },
+              name: 'Customer',
+              component: Customer
             }
           ]
         },
