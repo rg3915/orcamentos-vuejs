@@ -73,6 +73,10 @@ const Work = () => import('@/views/proposal/works/Work')
 const Proposals = () => import('@/views/proposal/proposals/Proposals')
 const Proposal = () => import('@/views/proposal/proposals/Proposal')
 
+// Entrys
+const Entrys = () => import('@/views/proposal/entrys/Entrys')
+const Entry = () => import('@/views/proposal/entrys/Entry')
+
 // Contracts
 const Contracts = () => import('@/views/proposal/contracts/Contracts')
 const Contract = () => import('@/views/proposal/contracts/Contract')
@@ -204,6 +208,32 @@ function configRoutes () {
               },
               name: 'Customer',
               component: Customer
+            }
+          ]
+        },
+        {
+          path: 'entrys',
+          meta: {
+            label: 'Entrys'
+          },
+          component: {
+            render(c) {
+              return c('router-view')
+            }
+          },
+          children: [
+            {
+              path: '',
+              name: 'Entrys',
+              component: Entrys
+            },
+            {
+              path: ':id',
+              meta: {
+                label: 'Entry Details'
+              },
+              name: 'Entry',
+              component: Entry
             }
           ]
         },
