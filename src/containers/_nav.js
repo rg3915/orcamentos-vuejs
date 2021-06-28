@@ -36,7 +36,7 @@ export default [
         _name: 'CSidebarNavItem',
         name: 'Entradas',
         to: '/entrys',
-        icon: 'cil-list'
+        icon: 'cil-drop'
       },
       {
         _name: 'CSidebarNavItem',
@@ -56,7 +56,7 @@ export default [
         to: '/works',
         icon: 'cil-layers'
       },
-      {
+      /* {
         _name: 'CSidebarNavTitle',
         _children: ['Theme']
       },
@@ -280,7 +280,7 @@ export default [
         icon: { name: 'cil-layers', class: 'text-white' },
         _class: 'bg-danger text-white',
         target: '_blank'
-      }
+      } */
     ]
   }
 ]
