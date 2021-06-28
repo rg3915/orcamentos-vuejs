@@ -61,6 +61,10 @@ const User = () => import('@/views/users/User')
 const Persons = () => import('@/views/persons/Persons')
 const Person = () => import('@/views/persons/Person')
 
+// Works
+const Works = () => import('@/views/works/Works')
+const Work = () => import('@/views/works/Work')
+
 Vue.use(Router)
 
 export default new Router({
@@ -162,6 +166,32 @@ function configRoutes () {
               },
               name: 'Person',
               component: Person
+            }
+          ]
+        },
+        {
+          path: 'works',
+          meta: {
+            label: 'Works'
+          },
+          component: {
+            render(c) {
+              return c('router-view')
+            }
+          },
+          children: [
+            {
+              path: '',
+              name: 'Works',
+              component: Works
+            },
+            {
+              path: ':id',
+              meta: {
+                label: 'Work Details'
+              },
+              name: 'Work',
+              component: Work
             }
           ]
         },

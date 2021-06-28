@@ -23,6 +23,12 @@ export default [
         icon: 'cil-people'
       },
       {
+        _name: 'CSidebarNavItem',
+        name: 'Works',
+        to: '/works',
+        icon: 'cil-layers'
+      },
+      {
         _name: 'CSidebarNavTitle',
         _children: ['Theme']
       },
