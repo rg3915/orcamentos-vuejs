@@ -45,10 +45,12 @@ $ npm install
 $ npm run serve
 ```
 
+
 ## Copyright and license
 
 Copyright 2020 creativeLabs Łukasz Holeczek. Code released under [the MIT license](https://github.com/coreui/coreui-free-vue-admin-template/blob/master/LICENSE).
 There is only one limitation - you cannot re-distribute the `CoreUI` as stock nor if you modify the `CoreUI`. In the past we faced some problems with persons who tried to sell `CoreUI` based templates.
+
 
 ## Support CoreUI Development
 
