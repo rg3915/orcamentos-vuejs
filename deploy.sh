@@ -13,6 +13,8 @@ cd dist
 # echo 'www.example.com' > CNAME
 
 git init
+git remote add origin git@github.com:rg3915/orcamentos-vuejs.git
+git checkout -b main
 git add -A
 git commit -m 'deploy'
 
