@@ -10,5 +10,8 @@ module.exports = {
   transpileDependencies: [
     '@coreui/utils',
     '@coreui/vue'
-  ]
+  ],
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/orcamentos-vuejs/'
+    : '/'
 }
