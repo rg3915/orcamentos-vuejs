@@ -14,6 +14,46 @@ export default [
       },
       {
         _name: 'CSidebarNavTitle',
+        _children: ['Proposal']
+      },
+      {
+        _name: 'CSidebarNavItem',
+        name: 'Entradas',
+        to: '/entrys',
+        icon: 'cil-drop',
+        badge: {
+          color: 'warning',
+          text: '0'
+        }
+      },
+      {
+        _name: 'CSidebarNavItem',
+        name: 'Orçamentos',
+        to: '/proposals',
+        icon: 'cil-list',
+        badge: {
+          color: 'success',
+          text: '0'
+        }
+      },
+      {
+        _name: 'CSidebarNavItem',
+        name: 'Contratos',
+        to: '/contracts',
+        icon: 'cil-star',
+        badge: {
+          color: 'danger',
+          text: '0'
+        }
+      },
+      {
+        _name: 'CSidebarNavItem',
+        name: 'Obras',
+        to: '/works',
+        icon: 'cil-layers'
+      },
+      {
+        _name: 'CSidebarNavTitle',
         _children: ['CRM']
       },
       {
@@ -27,34 +67,6 @@ export default [
         name: 'Contatos',
         to: '/persons',
         icon: 'cil-user'
-      },
-      {
-        _name: 'CSidebarNavTitle',
-        _children: ['Proposal']
-      },
-      {
-        _name: 'CSidebarNavItem',
-        name: 'Entradas',
-        to: '/entrys',
-        icon: 'cil-drop'
-      },
-      {
-        _name: 'CSidebarNavItem',
-        name: 'Orçamentos',
-        to: '/proposals',
-        icon: 'cil-list'
-      },
-      {
-        _name: 'CSidebarNavItem',
-        name: 'Contratos',
-        to: '/contracts',
-        icon: 'cil-star'
-      },
-      {
-        _name: 'CSidebarNavItem',
-        name: 'Obras',
-        to: '/works',
-        icon: 'cil-layers'
       },
       /* {
         _name: 'CSidebarNavTitle',
