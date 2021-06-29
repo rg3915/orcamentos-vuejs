@@ -20,7 +20,7 @@ export default [
         _name: 'CSidebarNavItem',
         name: 'Entradas',
         to: '/entrys',
-        icon: 'cil-drop',
+        icon: 'cil-layers',
         badge: {
           color: 'warning',
           text: '0'
@@ -50,7 +50,7 @@ export default [
         _name: 'CSidebarNavItem',
         name: 'Obras',
         to: '/works',
-        icon: 'cil-layers'
+        icon: 'cil-building'
       },
       {
         _name: 'CSidebarNavTitle',
