@@ -25,7 +25,7 @@ Este projeto foi baseado no CoreUI Free Vue Bootstrap Admin Template
 
 ### Demo
 
-Demo está disponível em []()
+Demo está disponível em [rg3915.github.io/orcamentos-vuejs](https://rg3915.github.io/orcamentos-vuejs/)
 
 ### Instalação
 
