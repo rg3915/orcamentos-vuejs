@@ -11,5 +11,7 @@ module.exports = {
     '@coreui/utils',
     '@coreui/vue'
   ],
-  publicPath: '/orcamentos-vuejs/'
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/orcamentos-vuejs/'
+    : '/'
 }
