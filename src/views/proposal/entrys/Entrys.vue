@@ -18,10 +18,10 @@
             :pagination="{ doubleArrows: false, align: 'center'}"
             @page-change="pageChange"
           >
-            <template #status="data">
+            <template #priority="data">
               <td>
-                <CBadge :color="getBadge(data.item.status)">
-                  {{data.item.status}}
+                <CBadge :color="getBadgePriority(data.item.priority)">
+                  {{data.item.priority}}
                 </CBadge>
               </td>
             </template>
@@ -62,6 +62,15 @@ export default {
     }
   },
   methods: {
+    getBadgePriority (priority) {
+      switch (priority) {
+        case 'Urgente': return 'danger'
+        case 'Alta': return 'warning'
+        case 'Normal': return 'info'
+        case 'Baixa': return 'secondary'
+        default: 'info'
+      }
+    },
     getBadge (status) {
       switch (status) {
         case 'Active': return 'success'
