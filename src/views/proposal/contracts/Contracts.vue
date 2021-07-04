@@ -25,6 +25,11 @@
                 </CBadge>
               </td>
             </template>
+            <template #value="data">
+              <td class="text-right">
+                {{data.item.value|formatPrice}}
+              </td>
+            </template>
           </CDataTable>
         </CCardBody>
       </CCard>
@@ -40,10 +45,12 @@ export default {
     return {
       items: contractsData,
       fields: [
-        { key: 'username', label: 'Name', _classes: 'font-weight-bold' },
-        { key: 'registered' },
-        { key: 'role' },
-        { key: 'status' }
+        { key: 'id', label: 'Número' },
+        { key: 'work', label: 'Obra' },
+        { key: 'customer', label: 'Cliente' },
+        { key: 'seller', label: 'Vendedor' },
+        { key: 'value', label: 'Valor' },
+        { key: 'date_conclusion', label: 'Data' }
       ],
       activePage: 1
     }
@@ -56,6 +63,11 @@ export default {
           this.activePage = Number(route.query.page)
         }
       }
+    }
+  },
+  filters: {
+    formatPrice(value) {
+      return (value/1).toFixed(2).replace('.', ',').toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
     }
   },
   methods: {
