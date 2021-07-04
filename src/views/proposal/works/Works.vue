@@ -11,7 +11,7 @@
             striped
             :items="items"
             :fields="fields"
-            :items-per-page="5"
+            :items-per-page="10"
             clickable-rows
             :active-page="activePage"
             @row-clicked="rowClicked"
