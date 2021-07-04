@@ -39,7 +39,7 @@ export default {
   computed: {
     fields () {
       return [
-        { key: 'key', label: this.username, _style: 'width:150px'},
+        { key: 'key', label: this.work, _style: 'width:150px'},
         { key: 'value', label: '', _style: 'width:150px;' }
       ]
     },
@@ -50,10 +50,10 @@ export default {
       return userDetails.map(([key, value]) => { return { key, value } })
     },
     visibleData () {
-      return this.workData.filter(param => param.key !== 'username')
+      return this.workData.filter(param => param.key !== 'work')
     },
-    username () {
-      return this.workData.filter(param => param.key === 'username')[0].value
+    work () {
+      return this.workData.filter(param => param.key === 'work')[0].value
     }
   },
   methods: {

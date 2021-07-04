@@ -1,6 +1,6 @@
 <template>
   <CRow>
-    <CCol col="12" xl="8">
+    <CCol col="12">
       <CCard>
         <CCardHeader>
           Obras
@@ -40,10 +40,13 @@ export default {
     return {
       items: worksData,
       fields: [
-        { key: 'username', label: 'Name', _classes: 'font-weight-bold' },
-        { key: 'registered' },
-        { key: 'role' },
-        { key: 'status' }
+        { key: 'work', label: 'Obra' },
+        { key: 'customer', label: 'Cliente' },
+        { key: 'address', label: 'Endereço' },
+        { key: 'district', label: 'Bairro' },
+        { key: 'city', label: 'Cidade' },
+        { key: 'uf', label: 'UF' },
+        { key: 'person', label: 'Contato' },
       ],
       activePage: 1
     }
