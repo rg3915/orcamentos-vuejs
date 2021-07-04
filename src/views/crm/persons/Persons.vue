@@ -18,11 +18,11 @@
             :pagination="{ doubleArrows: false, align: 'center'}"
             @page-change="pageChange"
           >
-            <template #status="data">
+            <template #photo="data">
               <td>
-                <CBadge :color="getBadge(data.item.status)">
-                  {{data.item.status}}
-                </CBadge>
+                <div class="c-avatar">
+                  <img :src="data.item.photo" alt="" class="c-avatar-img">
+                </div>
               </td>
             </template>
           </CDataTable>
@@ -40,10 +40,10 @@ export default {
     return {
       items: personsData,
       fields: [
-        { key: 'username', label: 'Name', _classes: 'font-weight-bold' },
-        { key: 'registered' },
-        { key: 'role' },
-        { key: 'status' }
+        { key: 'name', label: 'Nome' },
+        { key: 'photo', label: 'Foto' },
+        { key: 'email', label: 'E-mail' },
+        { key: 'company', label: 'Empresa' }
       ],
       activePage: 1
     }
