@@ -40,11 +40,7 @@ export default [
         _name: 'CSidebarNavItem',
         name: 'Contratos',
         to: '/contracts',
-        icon: 'cil-star',
-        badge: {
-          color: 'danger',
-          text: '0'
-        }
+        icon: 'cil-star'
       },
       {
         _name: 'CSidebarNavItem',
