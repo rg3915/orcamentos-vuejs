@@ -1,6 +1,6 @@
 <template>
   <CRow>
-    <CCol col="12" xl="8">
+    <CCol col="12">
       <CCard>
         <CCardHeader>
           Entradas
@@ -40,10 +40,13 @@ export default {
     return {
       items: entrysData,
       fields: [
-        { key: 'username', label: 'Name', _classes: 'font-weight-bold' },
-        { key: 'registered' },
-        { key: 'role' },
-        { key: 'status' }
+        { key: 'work', label: 'Obra' },
+        { key: 'customer', label: 'Cliente' },
+        { key: 'seller', label: 'Vendedor' },
+        { key: 'priority', label: 'Prioridade' },
+        { key: 'category', label: 'Categoria' },
+        { key: 'description', label: 'Descrição' },
+        { key: 'created', label: 'Criado em' }
       ],
       activePage: 1
     }
