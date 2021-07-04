@@ -18,10 +18,10 @@
             :pagination="{ doubleArrows: false, align: 'center'}"
             @page-change="pageChange"
           >
-            <template #status="data">
+            <template #type_customer="data">
               <td>
-                <CBadge :color="getBadge(data.item.status)">
-                  {{data.item.status}}
+                <CBadge :color="getBadge(data.item.type_customer)">
+                  {{data.item.type_customer}}
                 </CBadge>
               </td>
             </template>
@@ -40,10 +40,10 @@ export default {
     return {
       items: customersData,
       fields: [
-        { key: 'username', label: 'Name', _classes: 'font-weight-bold' },
-        { key: 'registered' },
-        { key: 'role' },
-        { key: 'status' }
+        { key: 'customer', label: 'Cliente' },
+        { key: 'email', label: 'E-mail' },
+        { key: 'phone', label: 'Telefone' },
+        { key: 'type_customer', label: 'Tipo de cliente' },
       ],
       activePage: 1
     }
@@ -59,13 +59,12 @@ export default {
     }
   },
   methods: {
-    getBadge (status) {
-      switch (status) {
-        case 'Active': return 'success'
-        case 'Inactive': return 'secondary'
-        case 'Pending': return 'warning'
-        case 'Banned': return 'danger'
-        default: 'primary'
+    getBadge (type_customer) {
+      switch (type_customer) {
+        case 'particular': return 'warning'
+        case 'arquitetura': return 'success'
+        case 'construtora': return 'info'
+        default: 'info'
       }
     },
     rowClicked (item, index) {
