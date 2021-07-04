@@ -23,7 +23,7 @@ export default [
         icon: 'cil-layers',
         badge: {
           color: 'warning',
-          text: '0'
+          text: '18'
         }
       },
       {

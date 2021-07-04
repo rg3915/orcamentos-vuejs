@@ -3,7 +3,7 @@
     <CCol sm="6" lg="2">
       <CWidgetDropdown
         color="warning"
-        header="12"
+        header="18"
         text="Entradas"
       >
         <template #default>
@@ -34,7 +34,7 @@
     <CCol sm="6" lg="2">
       <CWidgetDropdown
         color="info"
-        header="90"
+        header="42"
         text="Orçamentos"
       >
         <template #default>
@@ -135,7 +135,7 @@
     <CCol sm="6" lg="2">
       <CWidgetDropdown
         color="success"
-        header="172"
+        header="112"
         text="Obras"
       >
         <template #default>

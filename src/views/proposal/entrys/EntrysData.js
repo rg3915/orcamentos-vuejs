@@ -17,8 +17,6 @@ const entrysData = [
   { work: 'Smith Group', customer: 'Sparks and Griffith', seller: 'Ryan Wells', priority: 'Normal', category: 'cotação', description: 'Green their yeah fall whom sea boy. Run hour personal top. Billion crime audience according hand.', created: '16/01/2021'},
   { work: 'Smith, Wilkinson and Brandt', customer: 'Stevens and Quinn', seller: 'Sean Mercer', priority: 'Normal', category: 'particular', description: 'Statement relate such rather market church young future. Now choose certain game say each. Eat care must member language think.', created: '17/01/2021'},
   { work: 'Smith-Brown', customer: 'Stone Fisher', seller: 'Sean Reed', priority: 'Baixa', category: 'particular', description: 'Control its network rich. Political about subject will simply throw task member. Theory behavior option realize. Six yet organization girl set door current. Ten forget drop science two.', created: '18/01/2021'},
-  { work: 'White, Garcia and Duncan', customer: 'Stone Ltda', seller: 'Taylor Taylor', priority: 'Urgente', category: 'concorrência', description: 'Yeah bill few outside beat. At same find. Note eight here action lead left bag. Large structure worry enter. White poor woman professor person recently husband.', created: '19/01/2021'},
-  { work: 'Wood House', customer: 'Thompson SA', seller: 'Victoria Haas', priority: 'Alta', category: 'cotação', description: 'Wait think computer up tell the. Democrat game hour which community contain interest.', created: '20/01/2021'},
 ]
 
 export default entrysData
