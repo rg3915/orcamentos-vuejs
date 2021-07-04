@@ -1,6 +1,6 @@
 <template>
   <CRow>
-    <CCol col="12" xl="8">
+    <CCol col="12" xl="9">
       <CCard>
         <CCardHeader>
           Clientes
@@ -11,7 +11,7 @@
             striped
             :items="items"
             :fields="fields"
-            :items-per-page="5"
+            :items-per-page="10"
             clickable-rows
             :active-page="activePage"
             @row-clicked="rowClicked"
@@ -61,9 +61,9 @@ export default {
   methods: {
     getBadge (type_customer) {
       switch (type_customer) {
-        case 'particular': return 'warning'
-        case 'arquitetura': return 'success'
-        case 'construtora': return 'info'
+        case 'Particular': return 'warning'
+        case 'Arquitetura': return 'success'
+        case 'Construtora': return 'info'
         default: 'info'
       }
     },
