@@ -1,6 +1,6 @@
 <template>
   <CRow>
-    <CCol col="12" xl="8">
+    <CCol col="12">
       <CCard>
         <CCardHeader>
           Orçamentos
@@ -18,11 +18,23 @@
             :pagination="{ doubleArrows: false, align: 'center'}"
             @page-change="pageChange"
           >
+            <template #priority="data">
+              <td>
+                <CBadge :color="getBadgePriority(data.item.priority)">
+                  {{data.item.priority}}
+                </CBadge>
+              </td>
+            </template>
             <template #status="data">
               <td>
                 <CBadge :color="getBadge(data.item.status)">
                   {{data.item.status}}
                 </CBadge>
+              </td>
+            </template>
+            <template #value="data">
+              <td class="text-right">
+                {{data.item.value|formatPrice}}
               </td>
             </template>
           </CDataTable>
@@ -40,10 +52,15 @@ export default {
     return {
       items: proposalsData,
       fields: [
-        { key: 'username', label: 'Name', _classes: 'font-weight-bold' },
-        { key: 'registered' },
-        { key: 'role' },
-        { key: 'status' }
+        { key: 'id', label: 'Número' },
+        { key: 'work', label: 'Obra' },
+        { key: 'customer', label: 'Cliente' },
+        { key: 'category', label: 'Categoria' },
+        { key: 'employee', label: 'Funcionário' },
+        { key: 'seller', label: 'Vendedor' },
+        { key: 'status', label: 'Status' },
+        { key: 'value', label: 'Valor' },
+        { key: 'date_conclusion', label: 'Conclusão' }
       ],
       activePage: 1
     }
@@ -58,14 +75,30 @@ export default {
       }
     }
   },
+  filters: {
+    formatPrice(value) {
+      return (value/1).toFixed(2).replace('.', ',').toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+    }
+  },
   methods: {
+    getBadgePriority (priority) {
+      switch (priority) {
+        case 'Urgente': return 'danger'
+        case 'Alta': return 'warning'
+        case 'Normal': return 'info'
+        case 'Baixa': return 'secondary'
+        default: 'info'
+      }
+    },
     getBadge (status) {
       switch (status) {
-        case 'Active': return 'success'
-        case 'Inactive': return 'secondary'
-        case 'Pending': return 'warning'
-        case 'Banned': return 'danger'
-        default: 'primary'
+        case 'cancelado': return 'secondary'
+        case 'não iniciado': return 'danger'
+        case 'em elaboração': return 'success'
+        case 'pendente': return 'warning'
+        case 'concluido': return 'info'
+        case 'aprovado': return 'primary'
+        default: 'success'
       }
     },
     rowClicked (item, index) {

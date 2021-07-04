@@ -39,7 +39,7 @@ export default {
   computed: {
     fields () {
       return [
-        { key: 'key', label: this.username, _style: 'width:150px'},
+        { key: 'key', label: this.id, _style: 'width:150px'},
         { key: 'value', label: '', _style: 'width:150px;' }
       ]
     },
@@ -50,10 +50,10 @@ export default {
       return userDetails.map(([key, value]) => { return { key, value } })
     },
     visibleData () {
-      return this.proposalData.filter(param => param.key !== 'username')
+      return this.proposalData.filter(param => param.key !== 'id')
     },
-    username () {
-      return this.proposalData.filter(param => param.key === 'username')[0].value
+    id () {
+      return this.proposalData.filter(param => param.key === 'id')[0].value
     }
   },
   methods: {
