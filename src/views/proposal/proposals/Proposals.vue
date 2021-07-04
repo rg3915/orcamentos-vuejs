@@ -11,7 +11,7 @@
             striped
             :items="items"
             :fields="fields"
-            :items-per-page="5"
+            :items-per-page="10"
             clickable-rows
             :active-page="activePage"
             @row-clicked="rowClicked"
@@ -92,12 +92,12 @@ export default {
     },
     getBadge (status) {
       switch (status) {
-        case 'cancelado': return 'secondary'
-        case 'não iniciado': return 'danger'
-        case 'em elaboração': return 'success'
-        case 'pendente': return 'warning'
-        case 'concluido': return 'info'
-        case 'aprovado': return 'primary'
+        case 'Cancelado': return 'secondary'
+        case 'Não iniciado': return 'danger'
+        case 'Em elaboração': return 'success'
+        case 'Pendente': return 'warning'
+        case 'Concluido': return 'info'
+        case 'Aprovado': return 'primary'
         default: 'success'
       }
     },
