@@ -1,32 +1,14 @@
 const contractsData = [
-  {
-    id: '015.21',
-    work: 'Riley Ltd',
-    customer: 'Simple Trade',
-    employee: 'Jeffery Price',
-    seller: 'Nathaniel Simpson',
-    priority: 'Alta',
-    category: 'consulta',
-    description: 'Catch environment that pay race. Ago half no someone. Level picture model language film. Attention science involve police tonight idea appear.',
-    value: 1266396,
-    status: 'aprovado',
-    created: '15/01/2021',
-    date_conclusion: '15/01/2021'
-  },
-  {
-    id: '020.21',
-    work: 'Wood House',
-    customer: 'Thompson SA',
-    employee: 'Zachary Robinson',
-    seller: 'Victoria Haas',
-    priority: 'Alta',
-    category: 'cotação',
-    description: 'Wait think computer up tell the. Democrat game hour which community contain interest.',
-    value: 811556,
-    status: 'aprovado',
-    created: '20/01/2021',
-    date_conclusion: '20/01/2021'
-  },
+  {'id': '001.21', 'work': 'Jones-Robertson', 'customer': 'Castro, Castillo and Owens', 'employee': 'Mr. Vincent Mendoza DVM', 'seller': 'Robert Hernandez', 'priority': 'Urgente', 'category': 'Particular', 'description': 'She onto able win. Law me picture edge sure once special.', 'value': 207221, 'status': 'Aprovado', 'created': '03/04/2021', 'date_conclusion': '30/05/2021'},
+  {'id': '004.21', 'work': 'Wade LLC', 'customer': 'Escobar LLC', 'employee': 'Wanda Wright', 'seller': 'Christopher Cook', 'priority': 'Urgente', 'category': 'Global', 'description': 'Magazine fact trouble instead structure everybody. Pretty able fund light give hand. Among us because. Long protect summer analysis off.', 'value': 1276112, 'status': 'Aprovado', 'created': '17/03/2021', 'date_conclusion': '18/03/2021'},
+  {'id': '005.21', 'work': 'Hensley, Jackson and Perez', 'customer': 'Pierce, Webb and Lee', 'employee': 'Lori Schmidt', 'seller': 'Heather Miller', 'priority': 'Alta', 'category': 'Cotação', 'description': 'Practice box anything interview Congress political. In each senior ahead. Year wind move successful hour decide.\nReceive authority sea where prove. Best happen cost ahead turn a.', 'value': 10969, 'status': 'Aprovado', 'created': '30/06/2021', 'date_conclusion': '17/04/2021'},
+  {'id': '013.21', 'work': 'Parker, Smith and Webb', 'customer': 'Gibbs-Walsh', 'employee': 'Ruben Barrera', 'seller': 'Kristina Cortez', 'priority': 'Urgente', 'category': 'Orçamento', 'description': 'Issue west whatever east smile specific. Theory gas interview authority our coach. Require summer miss health for finally.', 'value': 674963, 'status': 'Aprovado', 'created': '24/05/2021', 'date_conclusion': '13/06/2021'},
+  {'id': '014.21', 'work': 'Williams Group', 'customer': 'Collins LLC', 'employee': 'Virginia Terry', 'seller': 'Joshua Carroll', 'priority': 'Alta', 'category': 'Extra', 'description': 'Record field become. Style down hour sit base through grow. Traditional wear according peace these write.\nReturn peace physical drug. Foot hit nature environmental reach interesting.', 'value': 392397, 'status': 'Aprovado', 'created': '22/03/2021', 'date_conclusion': '09/05/2021'},
+  {'id': '018.21', 'work': 'Clay, Morrison and Campos', 'customer': 'Chandler and Sons', 'employee': 'Lori Smith', 'seller': 'Melissa Chavez', 'priority': 'Alta', 'category': 'Outros', 'description': 'Understand western expect often always talk collection resource. Well its phone ok old Mrs leg form. Suddenly give spring authority house soldier city. North mean mission.', 'value': 1722512, 'status': 'Aprovado', 'created': '23/03/2021', 'date_conclusion': '25/05/2021'},
+  {'id': '024.21', 'work': 'Acosta, Kramer and Blair', 'customer': 'Barber-Holland', 'employee': 'Marie Avery', 'seller': 'Julie Owens', 'priority': 'Alta', 'category': 'Cotação', 'description': 'It paper service find response commercial should. Others model letter send.\nClaim him card control much argue. Nor spend election Congress. Kid require back meeting.', 'value': 1451728, 'status': 'Aprovado', 'created': '26/05/2021', 'date_conclusion': '30/03/2021'},
+  {'id': '029.21', 'work': 'Montgomery Ltd', 'customer': 'Chan-Beasley', 'employee': 'Mr. Mark Jordan II', 'seller': 'Ryan Hernandez', 'priority': 'Urgente', 'category': 'Extra', 'description': 'Sign ability police weight option magazine read light. Everything raise join two while owner less.\nSell issue page tough ago affect player hear. Rock interesting agency opportunity everybody quickly.', 'value': 1917740, 'status': 'Aprovado', 'created': '21/03/2021', 'date_conclusion': '14/04/2021'},
+  {'id': '031.21', 'work': 'Campbell-Clayton', 'customer': 'Nguyen-Smith', 'employee': 'Dwayne Rosario', 'seller': 'Dylan Welch', 'priority': 'Baixa', 'category': 'Cotação', 'description': 'East condition different attorney level group cultural. Someone glass memory finish explain that feeling.', 'value': 1404120, 'status': 'Aprovado', 'created': '08/03/2021', 'date_conclusion': '31/03/2021'},
+  {'id': '034.21', 'work': 'Patrick, Bailey and Miller', 'customer': 'Davis Ltd', 'employee': 'Dennis Morales Jr.', 'seller': 'Alicia Kelly', 'priority': 'Alta', 'category': 'Cotação', 'description': 'Continue kid surface turn car. Cold late even make poor season study become. Ever interview development treatment including think build camera.', 'value': 1305581, 'status': 'Aprovado', 'created': '09/03/2021', 'date_conclusion': '26/04/2021'},
 ]
 
 export default contractsData

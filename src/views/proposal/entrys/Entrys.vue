@@ -71,15 +71,6 @@ export default {
         default: 'info'
       }
     },
-    getBadge (status) {
-      switch (status) {
-        case 'Active': return 'success'
-        case 'Inactive': return 'secondary'
-        case 'Pending': return 'warning'
-        case 'Banned': return 'danger'
-        default: 'primary'
-      }
-    },
     rowClicked (item, index) {
       this.$router.push({path: `entrys/${index + 1}`})
     },

@@ -69,7 +69,7 @@
     <CCol sm="6" lg="2">
       <CWidgetDropdown
         color="primary"
-        header="20"
+        header="10"
         text="Contratos"
       >
         <template #default>
