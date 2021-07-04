@@ -33,7 +33,7 @@ export default [
         icon: 'cil-list',
         badge: {
           color: 'success',
-          text: '0'
+          text: '6'
         }
       },
       {

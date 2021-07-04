@@ -15,13 +15,13 @@
                   <CCol sm="6">
                     <CCallout color="success">
                       <small class="text-muted">Em Elaboração</small><br>
-                      <strong class="h4">10</strong>
+                      <strong class="h4">9</strong>
                     </CCallout>
                   </CCol>
                   <CCol sm="6">
                     <CCallout color="warning">
                       <small class="text-muted">Pendentes</small><br>
-                      <strong class="h4">15</strong>
+                      <strong class="h4">13</strong>
                     </CCallout>
                   </CCol>
                 </CRow>
@@ -174,7 +174,7 @@
                   <CCol sm="6">
                     <CCallout color="info">
                       <small class="text-muted">Concluídos</small><br>
-                      <strong class="h4">42</strong>
+                      <strong class="h4">8</strong>
                     </CCallout>
                   </CCol>
                   <CCol sm="6">
@@ -381,13 +381,13 @@
                   <CCol sm="6">
                     <CCallout color="primary">
                       <small class="text-muted">Aprovados</small><br>
-                      <strong class="h4">14</strong>
+                      <strong class="h4">10</strong>
                     </CCallout>
                   </CCol>
                   <CCol sm="6">
                     <CCallout color="danger">
                       <small class="text-muted">Cancelados</small><br>
-                      <strong class="h4">6</strong>
+                      <strong class="h4">0</strong>
                     </CCallout>
                   </CCol>
                 </CRow>
