@@ -14,7 +14,7 @@ export default [
       },
       {
         _name: 'CSidebarNavTitle',
-        _children: ['Proposal']
+        _children: ['Orçamentos']
       },
       {
         _name: 'CSidebarNavItem',

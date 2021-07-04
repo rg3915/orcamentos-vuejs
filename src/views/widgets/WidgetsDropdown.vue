@@ -145,7 +145,7 @@
             :caret="false"
           >
             <template #toggler-content>
-             <CIcon name="cil-user"/>
+             <CIcon name="cil-building"/>
             </template>
             <CDropdownItem>Action</CDropdownItem>
             <CDropdownItem>Another action</CDropdownItem>
@@ -177,7 +177,7 @@
             :caret="false"
           >
             <template #toggler-content>
-             <CIcon name="cil-building"/>
+             <CIcon name="cil-user"/>
             </template>
             <CDropdownItem>Action</CDropdownItem>
             <CDropdownItem>Another action</CDropdownItem>
