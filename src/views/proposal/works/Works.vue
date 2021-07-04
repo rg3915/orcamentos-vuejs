@@ -4,6 +4,7 @@
       <CCard>
         <CCardHeader>
           Obras
+          <span class="float-right">{{ items.length }} itens</span>
         </CCardHeader>
         <CCardBody>
           <CDataTable
