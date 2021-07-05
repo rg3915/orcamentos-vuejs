@@ -1,17 +1,27 @@
 <template>
   <CRow>
-    <CCol col="12" xl="8">
+    <CCol col="12">
       <CCard>
         <CCardHeader>
           <strong>Contratos</strong>
           <span class="float-right"><strong>{{ items.length }} itens</strong></span>
-          <p>Contratos são orçamentos que foram aprovados. Consequentemente, possui um valor total e um vendedor.</p>
+          <CRow class="d-flex align-items-end">
+            <CCol col="8">
+              <p>Contratos são orçamentos que foram aprovados. Consequentemente, possui um valor total e um vendedor.</p>
+            </CCol>
+            <CCol col="4">
+              <CForm inline>
+                <CButton type="submit" size="sm" color="primary" class="mr-2">Adicionar</CButton>
+                <CInput size="sm" placeholder="Buscar..." v-model="search" />
+              </CForm>
+            </CCol>
+          </CRow>
         </CCardHeader>
         <CCardBody>
           <CDataTable
             hover
             striped
-            :items="items"
+            :items="filteredItems"
             :fields="fields"
             :items-per-page="5"
             clickable-rows
@@ -54,7 +64,8 @@ export default {
         { key: 'value', label: 'Valor' },
         { key: 'date_conclusion', label: 'Data' }
       ],
-      activePage: 1
+      activePage: 1,
+      search: ''
     }
   },
   watch: {
@@ -65,6 +76,16 @@ export default {
           this.activePage = Number(route.query.page)
         }
       }
+    }
+  },
+  computed: {
+    filteredItems() {
+      return this.items.filter((item) => {
+        return item.id.toLowerCase().indexOf(this.search.toLowerCase()) >= 0 ||
+               item.work.toLowerCase().indexOf(this.search.toLowerCase()) >= 0 ||
+               item.customer.toLowerCase().indexOf(this.search.toLowerCase()) >= 0 ||
+               item.seller.toLowerCase().indexOf(this.search.toLowerCase()) >= 0
+      });
     }
   },
   filters: {

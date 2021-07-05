@@ -1,17 +1,27 @@
 <template>
   <CRow>
-    <CCol col="12" xl="9">
+    <CCol col="12">
       <CCard>
         <CCardHeader>
           <strong>Clientes</strong>
           <span class="float-right"><strong>{{ items.length }} itens</strong></span>
-          <p>Os clientes podem ser construtoras, escritórios de arquitetura ou pessoas físicas, que chamamos de cliente particular.</p>
+          <CRow class="d-flex align-items-end">
+            <CCol col="8">
+              <p>Os clientes podem ser construtoras, escritórios de arquitetura ou pessoas físicas, que chamamos de cliente particular.</p>
+            </CCol>
+            <CCol col="4">
+              <CForm inline>
+                <CButton type="submit" size="sm" color="primary" class="mr-2">Adicionar</CButton>
+                <CInput size="sm" placeholder="Buscar..." v-model="search" />
+              </CForm>
+            </CCol>
+          </CRow>
         </CCardHeader>
         <CCardBody>
           <CDataTable
             hover
             striped
-            :items="items"
+            :items="filteredItems"
             :fields="fields"
             :items-per-page="10"
             clickable-rows
@@ -47,7 +57,8 @@ export default {
         { key: 'phone', label: 'Telefone' },
         { key: 'type_customer', label: 'Tipo de cliente' },
       ],
-      activePage: 1
+      activePage: 1,
+      search: ''
     }
   },
   watch: {
@@ -58,6 +69,14 @@ export default {
           this.activePage = Number(route.query.page)
         }
       }
+    }
+  },
+  computed: {
+    filteredItems() {
+      return this.items.filter((item) => {
+        return item.customer.toLowerCase().indexOf(this.search.toLowerCase()) >= 0 ||
+               item.email.toLowerCase().indexOf(this.search.toLowerCase()) >= 0
+      });
     }
   },
   methods: {

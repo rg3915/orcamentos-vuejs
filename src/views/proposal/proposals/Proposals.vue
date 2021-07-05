@@ -5,13 +5,23 @@
         <CCardHeader>
           <strong>Orçamentos</strong>
           <span class="float-right"><strong>{{ items.length }} itens</strong></span>
-          <p>Orçamentos são numerados e segue um status, além de outras informações como o valor total.</p>
+          <CRow class="d-flex align-items-end">
+            <CCol col="8">
+              <p>Orçamentos são numerados e segue um status, além de outras informações como o valor total.</p>
+            </CCol>
+            <CCol col="4">
+              <CForm inline>
+                <CButton type="submit" size="sm" color="primary" class="mr-2">Adicionar</CButton>
+                <CInput size="sm" placeholder="Buscar..." v-model="search" />
+              </CForm>
+            </CCol>
+          </CRow>
         </CCardHeader>
         <CCardBody>
           <CDataTable
             hover
             striped
-            :items="items"
+            :items="filteredItems"
             :fields="fields"
             :items-per-page="10"
             clickable-rows
@@ -64,7 +74,8 @@ export default {
         { key: 'value', label: 'Valor' },
         { key: 'date_conclusion', label: 'Conclusão' }
       ],
-      activePage: 1
+      activePage: 1,
+      search: ''
     }
   },
   watch: {
@@ -75,6 +86,17 @@ export default {
           this.activePage = Number(route.query.page)
         }
       }
+    }
+  },
+  computed: {
+    filteredItems() {
+      return this.items.filter((item) => {
+        return item.id.toLowerCase().indexOf(this.search.toLowerCase()) >= 0 ||
+               item.work.toLowerCase().indexOf(this.search.toLowerCase()) >= 0 ||
+               item.customer.toLowerCase().indexOf(this.search.toLowerCase()) >= 0 ||
+               item.employee.toLowerCase().indexOf(this.search.toLowerCase()) >= 0 ||
+               item.seller.toLowerCase().indexOf(this.search.toLowerCase()) >= 0
+      });
     }
   },
   filters: {

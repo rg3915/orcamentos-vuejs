@@ -5,13 +5,23 @@
         <CCardHeader>
           <strong>Entradas</strong>
           <span class="float-right"><strong>{{ items.length }} itens</strong></span>
-          <p>Entradas são orçamentos que ainda não foram feitos. Inicialmente ele não tem uma numeração e nem um funcionário designado a ele.</p>
+          <CRow class="d-flex align-items-end">
+            <CCol col="8">
+              <p>Entradas são orçamentos que ainda não foram feitos. Inicialmente ele não tem uma numeração e nem um funcionário designado a ele.</p>
+            </CCol>
+            <CCol col="4">
+              <CForm inline>
+                <CButton type="submit" size="sm" color="primary" class="mr-2">Adicionar</CButton>
+                <CInput size="sm" placeholder="Buscar..." v-model="search" />
+              </CForm>
+            </CCol>
+          </CRow>
         </CCardHeader>
         <CCardBody>
           <CDataTable
             hover
             striped
-            :items="items"
+            :items="filteredItems"
             :fields="fields"
             :items-per-page="5"
             clickable-rows
@@ -50,7 +60,8 @@ export default {
         { key: 'description', label: 'Descrição' },
         { key: 'created', label: 'Criado em' }
       ],
-      activePage: 1
+      activePage: 1,
+      search: ''
     }
   },
   watch: {
@@ -61,6 +72,16 @@ export default {
           this.activePage = Number(route.query.page)
         }
       }
+    }
+  },
+  computed: {
+    filteredItems() {
+      return this.items.filter((item) => {
+        return item.work.toLowerCase().indexOf(this.search.toLowerCase()) >= 0 ||
+               item.customer.toLowerCase().indexOf(this.search.toLowerCase()) >= 0 ||
+               item.seller.toLowerCase().indexOf(this.search.toLowerCase()) >= 0 ||
+               item.description.toLowerCase().indexOf(this.search.toLowerCase()) >= 0
+      });
     }
   },
   methods: {

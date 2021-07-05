@@ -5,13 +5,23 @@
         <CCardHeader>
           <strong>Obras</strong>
           <span class="float-right"><strong>{{ items.length }} itens</strong></span>
-          <p>Obras são o contexto principal de cada orçamento. E cada cliente pode possuir várias obras.</p>
+          <CRow class="d-flex align-items-end">
+            <CCol col="8">
+              <p>Obras são o contexto principal de cada orçamento. E cada cliente pode possuir várias obras.</p>
+            </CCol>
+            <CCol col="4">
+              <CForm inline>
+                <CButton type="submit" size="sm" color="primary" class="mr-2">Adicionar</CButton>
+                <CInput size="sm" placeholder="Buscar..." v-model="search" />
+              </CForm>
+            </CCol>
+          </CRow>
         </CCardHeader>
         <CCardBody>
           <CDataTable
             hover
             striped
-            :items="items"
+            :items="filteredItems"
             :fields="fields"
             :items-per-page="10"
             clickable-rows
@@ -50,7 +60,8 @@ export default {
         { key: 'uf', label: 'UF' },
         { key: 'person', label: 'Contato' },
       ],
-      activePage: 1
+      activePage: 1,
+      search: ''
     }
   },
   watch: {
@@ -61,6 +72,19 @@ export default {
           this.activePage = Number(route.query.page)
         }
       }
+    }
+  },
+  computed: {
+    filteredItems() {
+      return this.items.filter((item) => {
+        return item.work.toLowerCase().indexOf(this.search.toLowerCase()) >= 0 ||
+               item.customer.toLowerCase().indexOf(this.search.toLowerCase()) >= 0 ||
+               item.address.toLowerCase().indexOf(this.search.toLowerCase()) >= 0 ||
+               item.district.toLowerCase().indexOf(this.search.toLowerCase()) >= 0 ||
+               item.city.toLowerCase().indexOf(this.search.toLowerCase()) >= 0 ||
+               item.uf.toLowerCase().indexOf(this.search.toLowerCase()) >= 0 ||
+               item.person.toLowerCase().indexOf(this.search.toLowerCase()) >= 0
+      });
     }
   },
   methods: {
