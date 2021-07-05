@@ -3,8 +3,9 @@
     <CCol col="12">
       <CCard>
         <CCardHeader>
-          Orçamentos
-          <span class="float-right">{{ items.length }} itens</span>
+          <strong>Orçamentos</strong>
+          <span class="float-right"><strong>{{ items.length }} itens</strong></span>
+          <p>Orçamentos são numerados e segue um status, além de outras informações como o valor total.</p>
         </CCardHeader>
         <CCardBody>
           <CDataTable

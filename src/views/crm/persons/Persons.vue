@@ -3,8 +3,9 @@
     <CCol col="12" xl="8">
       <CCard>
         <CCardHeader>
-          Contatos
-          <span class="float-right">{{ items.length }} itens</span>
+          <strong>Contatos</strong>
+          <span class="float-right"><strong>{{ items.length }} itens</strong></span>
+          <p>Contato é a pessoa com quem você deve falar dentro de um cliente ou uma obra.</p>
         </CCardHeader>
         <CCardBody>
           <CDataTable

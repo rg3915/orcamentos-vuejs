@@ -3,8 +3,9 @@
     <CCol col="12">
       <CCard>
         <CCardHeader>
-          Entradas
-          <span class="float-right">{{ items.length }} itens</span>
+          <strong>Entradas</strong>
+          <span class="float-right"><strong>{{ items.length }} itens</strong></span>
+          <p>Entradas são orçamentos que ainda não foram feitos. Inicialmente ele não tem uma numeração e nem um funcionário designado a ele.</p>
         </CCardHeader>
         <CCardBody>
           <CDataTable

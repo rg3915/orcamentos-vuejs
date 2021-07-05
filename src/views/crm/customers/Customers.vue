@@ -3,8 +3,9 @@
     <CCol col="12" xl="9">
       <CCard>
         <CCardHeader>
-          Clientes
-          <span class="float-right">{{ items.length }} itens</span>
+          <strong>Clientes</strong>
+          <span class="float-right"><strong>{{ items.length }} itens</strong></span>
+          <p>Os clientes podem ser construtoras, escritórios de arquitetura ou pessoas físicas, que chamamos de cliente particular.</p>
         </CCardHeader>
         <CCardBody>
           <CDataTable

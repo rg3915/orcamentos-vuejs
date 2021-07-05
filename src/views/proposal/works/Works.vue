@@ -3,8 +3,9 @@
     <CCol col="12">
       <CCard>
         <CCardHeader>
-          Obras
-          <span class="float-right">{{ items.length }} itens</span>
+          <strong>Obras</strong>
+          <span class="float-right"><strong>{{ items.length }} itens</strong></span>
+          <p>Obras são o contexto principal de cada orçamento. E cada cliente pode possuir várias obras.</p>
         </CCardHeader>
         <CCardBody>
           <CDataTable

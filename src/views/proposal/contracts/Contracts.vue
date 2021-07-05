@@ -3,8 +3,9 @@
     <CCol col="12" xl="8">
       <CCard>
         <CCardHeader>
-          Contratos
-          <span class="float-right">{{ items.length }} itens</span>
+          <strong>Contratos</strong>
+          <span class="float-right"><strong>{{ items.length }} itens</strong></span>
+          <p>Contratos são orçamentos que foram aprovados. Consequentemente, possui um valor total e um vendedor.</p>
         </CCardHeader>
         <CCardBody>
           <CDataTable

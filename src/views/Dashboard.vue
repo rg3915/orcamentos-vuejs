@@ -1,5 +1,22 @@
 <template>
   <div>
+    <CRow>
+      <CCol col="12">
+        <CCard>
+          <CCardHeader>
+            Sistema de Orçamentos
+          </CCardHeader>
+          <CCardBody>
+            <CRow>
+              <CCol col="12">
+                <p><b>Orçamentos</b> é um sistema que gerencia orçamentos de obras de construção civil. Controla a sequência numérica dos orçamentos, seus valores e status. E cadastra clientes, obras e contatos. Cada cliente pode ter várias obras. E as entradas viram orçamentos, que por sua vez, podem virar contratos.</p>
+              </CCol>
+            </CRow>
+          </CCardBody>
+        </CCard>
+      </CCol>
+    </CRow>
+
     <WidgetsDropdown/>
 
     <CRow>
