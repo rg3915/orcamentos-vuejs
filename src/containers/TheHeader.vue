@@ -14,21 +14,21 @@
       <CIcon name="logo" height="48" alt="Logo"/>
     </CHeaderBrand>
     <CHeaderNav class="d-md-down-none mr-auto">
-      <!-- <CHeaderNavItem class="px-3">
-        <CHeaderNavLink to="/dashboard">
-          Dashboard
-        </CHeaderNavLink>
-      </CHeaderNavItem>
       <CHeaderNavItem class="px-3">
+        <a href="https://github.com/rg3915/orcamentos-vuejs" target="_blank">
+          Github
+        </a>
+      </CHeaderNavItem>
+      <!-- <CHeaderNavItem class="px-3">
         <CHeaderNavLink to="/users" exact>
           Users
         </CHeaderNavLink>
-      </CHeaderNavItem>
-      <CHeaderNavItem class="px-3">
-        <CHeaderNavLink>
-          Settings
-        </CHeaderNavLink>
       </CHeaderNavItem> -->
+      <CHeaderNavItem class="px-3">
+        <span>
+          Este projeto é baseado no&nbsp;<a href="https://github.com/rg3915/orcamentos" target="_blank">original</a>&nbsp;feito em Django.
+        </span>
+      </CHeaderNavItem>
     </CHeaderNav>
     <CHeaderNav class="mr-4">
       <CHeaderNavItem class="d-md-down-none mx-2">
