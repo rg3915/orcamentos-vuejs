@@ -166,7 +166,7 @@
     </CCol>
     <CCol sm="6" lg="2">
       <CWidgetDropdown
-        color="secondary"
+        color="dark"
         header="100"
         text="Contatos"
       >
@@ -189,7 +189,7 @@
           <CChartBarSimple
             class="mt-3 mx-3"
             style="height:70px"
-            background-color="light"
+            background-color="secondary"
             label="Members"
             labels="months"
           />
