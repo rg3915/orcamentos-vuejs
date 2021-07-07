@@ -134,7 +134,7 @@
     </CCol>
     <CCol sm="6" lg="2">
       <CWidgetDropdown
-        color="success"
+        color="info"
         header="112"
         text="Obras"
       >
@@ -157,7 +157,7 @@
           <CChartBarSimple
             class="mt-3 mx-3"
             style="height:70px"
-            background-color="rgb(150, 219, 173)"
+            background-color="secondary"
             label="Members"
             labels="months"
           />
@@ -166,7 +166,7 @@
     </CCol>
     <CCol sm="6" lg="2">
       <CWidgetDropdown
-        color="success"
+        color="secondary"
         header="100"
         text="Contatos"
       >
@@ -189,7 +189,7 @@
           <CChartBarSimple
             class="mt-3 mx-3"
             style="height:70px"
-            background-color="rgb(150, 255, 255)"
+            background-color="light"
             label="Members"
             labels="months"
           />
