@@ -45,6 +45,14 @@ $ npm install
 $ npm run serve
 ```
 
+### Build
+
+Você pode buildar para o gh-pages rodando
+
+```bash
+source deploy.sh
+```
+
 
 ## Copyright and license
 
