@@ -11,8 +11,7 @@
             </CCol>
             <CCol col="4">
               <CForm inline>
-                <CButton type="submit" size="sm" color="primary" class="mr-2">Adicionar</CButton>
-                <CInput size="sm" placeholder="Buscar..." v-model="search" />
+                <CInput placeholder="Buscar..." v-model="search" />
               </CForm>
             </CCol>
           </CRow>
